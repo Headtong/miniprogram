@@ -1,0 +1,18 @@
+<view bindtap="toExpressSrc" style="border-color:#fbfbfb; font-size:40px;position:fixed;height: 5%;width: 100%;top:3%;text-align:left;z-index: 4;">
+    <text decode="true" style="color: #b2b2b2;position: absolute;left:4%">&lt;</text>
+</view>
+<view style="height: 25%;width: 100%;position: relative;top:10%;margin-bottom: 15%;" wx:for="{{expressMessageList}}" wx:key="key">
+    <view style="color: #fff;z-index: 4;position: relative;top: 5%;left: 10%;">收件单位：{{item.SJDW}}</view>
+    <view style="color: #fff;z-index: 4;position: relative;top: 10%;left: 10%;">收件人员：{{item.SJR}}</view>
+    <view style="color: #fff;z-index: 4;position: relative;top: 15%;left: 10%;">收件地址：{{item.SJSF}}{{item.SJCS}}</view>
+    <view style="color: #fff;z-index: 4;position: relative;top: 20%;left: 10%;">发件日期：{{item.FJRQ}}</view>
+    <view style="color: #fff;z-index: 4;position: relative;top: 25%;left: 10%;">快递公司：{{item.expressFirm}}</view>
+    <image src="../images/express-img2.png" style="height: 150%;width: 100%;position: absolute;left: 1%;top:-24%;z-index:1"></image>
+    <image src="../images/u23.png" style="height: 80%;width: 55%;opacity:0.5;z-index: 2;position: absolute;left: 40%;top: 16%;"></image>
+    <image src="../images/express-img3.png" style="height:25%;width:83%;z-index:3;position:absolute;left:8%;bottom:-8%;"></image>
+    <view style="color: #111;z-index: 4;position: relative;top: 35%;left: 17%;text-align: left;">收货单号：{{item.TktCode}}
+</view>
+    <button bindtap="clickCopy" data-TktCode="{{item.TktCode}}" plain="true" style="border:none;height: 25px;width:25px;position:relictive;top:24%;left:20%;padding-left:0px;padding-right:0px;padding-bottom:0px;padding-top:0px;">
+        <image src="../images/copy.png" style="z-index:4;width:25px;height: 25px;"></image>
+    </button>
+</view>

@@ -1,0 +1,22 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/register/register",
+        "pages/user/user",
+        "pages/logs/logs",
+        "pages/expressSrc/expressSrc",
+        "pages/express/express",
+        "pages/repairOrder/repairOrder",
+        "pages/repairSrc/repairSrc"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+    },
+"usingComponents": {
+        "cu-custom": "/pages/colorui/components/cu-custom"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

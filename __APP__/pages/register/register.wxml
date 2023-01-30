@@ -1,0 +1,23 @@
+<image class="header-img1" src="../images/register-img1.png" style="height:100%;position:absolute;width:100%;"></image>
+<form bindsubmit="getUserlnfo">
+    <button bind:chooseavatar="chooseavatar" class="cu-avatar xl round redius shadow avatarBtn" name="button" openType="chooseAvatar" style="z-index: 2;position :absolute;left:20%;top: 15%;z-index: 3;overflow-y: hidden;box-shadow:1px 1px 14px rgb(100, 102, 104);">
+        <image src="{{avatarUrl}}" style="height: 100%;"></image>
+    </button>
+    <image class="avatarlogotImg1" src="../images/u12.png" style="z-index:3;position:absolute;height:2%;width:4%;top:23%;left:30%"></image>
+    <image class="avatarlogoImg2" src="../images/u13.png" style="z-index:4;position:absolute;height:1.5%;width:3%;top:23.3%;left:30.5%"></image>
+    <view class="inputContainer" style="width: 100%;height: 10%;position: absolute;top: 40%;left: 24%;text-align: left;">
+        <text class="inputTitle" style="position: absolute;left:8%;bottom:103%;font-size: 13px;">请输入您的用户昵称</text>
+        <image class="inputImg1" src="../images/register-img2.png" style="height: 90%;width: 80%;"></image>
+        <input bindinput="nickname" class="inputNickname" value="{{userInfo}}" name="inputNickname" style="width:60%;height: 50%;position: absolute;top: 15%;left: 3%;text-align: left;color: #fff;" type="nickname"></input>
+    </view>
+    <view class="inputContainer2" style="width: 100%;height: 10%;position: absolute;top: 55%;left: 24%;text-align: left;">
+        <text class="inputTitle2" style="position: absolute;left:8%;bottom:103%;font-size: 13px;">请输入您的公司名称</text>
+        <text class="inputTitle" style="position: absolute;left:6%;bottom:-13%;font-size: 10px;color:red">*注:为了确保您的查询信息准确，请务必输入公司全称！</text>
+        <image class="inputImg2" src="../images/register-img2.png" style="height: 100%;width: 80%;"></image>
+        <input bindblur="judgefirm" bindinput="company" class="inputCompany" name="inputCompany" style="width:60%;height: 50%;position: absolute;top: 15%;left: 3%;text-align: left;color: #fff;" type="text" value="{{companyName}}"></input>
+    </view>
+    <button class="submitBtn" disabled="{{disabled}}" formType="submit" plain="true" style="border:none;position:absolute;top:82%;left:55%;height:9%;width:15%;" type="primary">
+        <image class="submitBtnImg1" src="../images/register-img3-1.png" style="z-index:3;height:62.09px;width:58.88px;top: 0%;position:absolute;right: 0%;"></image>
+        <image src="../images/register-img3-2.png" style="z-index:4;height:37.25px;width:35.31px;top: 20%;left:20%;position:absolute;"></image>
+    </button>
+</form>

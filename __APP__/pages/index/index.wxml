@@ -1,0 +1,33 @@
+<view style="height: 100%;width:100%;">
+    <image src="../images/indexBGI.png" style="height: 100%; width: 100%;"></image>
+    <view bindtap="userInfo" class="cu-avatar xl round" style="z-index: 3;position :absolute;left:12%;top: 12%;z-index: 3;overflow-y: hidden;">
+        <image src="{{imgUserSrc}}" style="height: 100%;"></image>
+    </view>
+    <view bindtap="navExpress" style="position :absolute;height:10%;width:80%;left:10%;bottom: 50%;border-radius: 20px 20px 20px 20px;background-color: rgba(255, 255, 255, 0.223);">
+        <text style="position: absolute;font-size: 22px;color: #FFFFFF;padding-top:7%;padding-left: 5%;">物流快件查询</text>
+        <image src="../images/index-img3-1.png" style="width:50%;height: 150%;position: absolute;bottom:-20%;left:50%;"></image>
+    </view>
+    <view bindtap="navRepair" style="position :absolute;height:10%;width:80%;left:10%;bottom: 30%;border-radius: 20px 20px 20px 20px;background-color: rgba(255, 255, 255, 0.223);">
+        <text style="position: absolute;font-size: 22px;color: #FFFFFF;padding-top:7%;padding-left: 5%;">返修快件查询</text>
+        <image src="../images/repairlogo.png" style="width:40%;height:120%;position:absolute;bottom: -15%;left:50%;"></image>
+    </view>
+    <view bindtap="showBanner" style="position:absolute;top:25%;left:76%;height:6%;width:100%;background-color: rgba(46, 129, 238, 0.425);border-radius: 15px 0px 0px 15px; box-shadow: rgba(22, 22, 22, 0.151) 5px 5px 5px 5px;">
+        <text style="color: red;font-size: 25px;font-family:'Broadway';position:absolute;left:20px;">NEW
+</text>
+        <text style="font-size: 13px;position:absolute;left:-18%;width:85px;color: white;position:absolute;top:28px;left:23px;">新品上市</text>
+    </view>
+    <view class="cu-modal {{modalName=='Image'?'show':''}}">
+        <view class="cu-dialog">
+            <view class="bg-img" style="background-image: url('https://www.vanmalock.com/static/images/bannertq.jpg');height:400px;">
+                <view class="cu-bar justify-end text-white">
+                    <view bindtap="hideModal" class="action">
+                        <text class="cuIcon-close "></text>
+                    </view>
+                </view>
+            </view>
+            <view class="cu-bar bg-white">
+                <view bindtap="hideModal" class="action margin-0 flex-sub  solid-left">我已知晓</view>
+            </view>
+        </view>
+    </view>
+</view>

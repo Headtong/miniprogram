@@ -1,0 +1,49 @@
+<view bindtap="torepairSrc" style="border-color:#fbfbfb; font-size:40px;position:fixed;height: 5%;width: 100%;top:3%;text-align:left;z-index: 4;">
+    <text decode="true" style="color: #b2b2b2;position: absolute;left:4%">&lt;</text>
+</view>
+<view style="height: 45%;width: 100%;position: relative;top:10%;margin-bottom: 5%;" wx:for="{{repairValue}}" wx:key="key">
+    <view style="height: 100%; width: 90%;position: absolute;left:5%">
+        <image src="{{item.imgBgi}}" style="height: 100%;width: 100%;position: absolute;"></image>
+        <view style="color: #111;z-index: 4;position: relative;top: 12%;left: 15%;">到货日期：{{item.DHRQ}}</view>
+        <view style="color: #111;z-index: 4;position: relative;top: 15%;left: 15%;">设备型号：{{item.CPXH1}}</view>
+        <view style="color: #111;z-index: 4;position: relative;top: 18%;left: 15%;">设备数量：{{item.CPSL1}}</view>
+        <scroll-view scrollY style="color: #111;z-index: 4;position: relative;top: 21%;left: 15%; width: 65%;height: 30%;">维修说明：{{item.WXSM}}</scroll-view>
+        <view style="color: #111;z-index: 4;position: relative;top: 24%;left: 15%;">维修状态：{{item.ChargeD}}</view>
+        <button bindtap="showModal1" data-index="{{index+1}}" data-target="Modal" style="background: {{item.btnColor}}; color: #FFF;position: absolute;top: 90%;left:26%;" wx:if="{{item.inCharge===1}}">查看维修状态</button>
+        <button bindtap="showModal" data-index="{{index+1}}" data-target="Modal" style="background: {{item.btnColor}}; color: #FFF;position: absolute;top: 90%;left:26%;" wx:else>查看维修状态</button>
+    </view>
+    <view class="cu-modal {{item.modalName=='Modal'?'show':''}}">
+        <view class="cu-dialog">
+            <view class="cu-bar bg-white justify-end">
+                <view class="content">返修信息</view>
+                <view bindtap="hideModal" class="action">
+                    <text class="cuIcon-close text-red"></text>
+                </view>
+            </view>
+            <view class="padding-lg">
+                <text>{{item.describe}}
+</text>
+            </view>
+        </view>
+    </view>
+    <view class="cu-modal {{item.modalName1=='Modal'?'show':''}}">
+        <view class="cu-dialog">
+            <view class="cu-bar bg-white justify-end">
+                <view class="content">返修信息</view>
+                <view bindtap="hideModal" class="action">
+                    <text class="cuIcon-close text-red"></text>
+                </view>
+            </view>
+            <view class="padding-lg" style="text-align: left;height: 150px;">
+                <text style="position:absolute;top:28.5%;width:38%;">{{item.describe}}
+</text>
+                <text style="position:absolute;top:65%;">销售人员: {{item.XSRY}}
+</text>
+                <text style="position:absolute;top:80%;">电话: {{item.phone}}</text>
+                <text style="position:absolute;top:28%;left:65%;">支付方式</text>
+                <image src="{{item.payExcode}}" style="height: 100px;width: 120px;position:absolute;top:38%;left:56%;"></image>
+                <text style="position:absolute;top:88%;left:50%;color:red;font-size:11px;">*注：支付需要备注您的公司名称</text>
+            </view>
+        </view>
+    </view>
+</view>

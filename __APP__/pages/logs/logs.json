@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "查看启动日志",
+    "usingComponents": {
+        "cu-custom": "/pages/colorui/components/cu-custom"
+    }
+}

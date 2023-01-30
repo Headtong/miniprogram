@@ -1,0 +1,25 @@
+<view style="height: 100%;width:100%;">
+    <view bindtap="toIndex" style="border-color:#fbfbfb; font-size:40px;position:fixed;height: 5%;width: 100%;top:3%;text-align:left;z-index: 4;">
+        <text decode="true" style="color: #b2b2b2;position: absolute;left:4%">&lt;</text>
+    </view>
+    <image src="../images/index-img1.png" style="z-index: 1;display:flex;height: 100%;width:100%;justify-content: center;align-items:center;"></image>
+    <image src="../images/index-img2.png" style="width:130%;height:75%;position :absolute;top: 25%;z-index: 2;overflow-y: hidden;"></image>
+    <image src="../images/index-img3-1.png" style="width:52%;height:25%;position :absolute;left:45%;top: 12%;z-index: 3;overflow-y: hidden;"></image>
+    <image src="../images/index-img3-2.png" style="width:100%;height:100%;position :absolute;left:1%;bottom: 3%;z-index: 3;overflow-y: hidden;"></image>
+    <image src="../images/startTime.png" style="width:49.67px;height:51.52px;position :absolute;left:18%;top: 42%;z-index: 4;overflow-y: hidden;"></image>
+    <view style="z-index:5;position:absolute;top:47%;left:35%;height:3%;">
+        <picker bindchange="startDateChange" end="2099-12-31" mode="date" start="2017-01-01" style="position: relative;top: 25%" value="{{startDate}}">
+            <view style="border-bottom: rgb(0, 0, 0) solid 1px;width:180rpx">{{startDate}}</view>
+        </picker>
+    </view>
+    <view style="z-index:5;position:absolute;top:66%;left:35%;height:3%">
+        <picker bindchange="startDateChange" end="2099-12-31" mode="date" start="2017-01-01" style="position: relative;top:25%" value="{{endDate}}">
+            <view style="border-bottom: rgb(0, 0, 0) solid 1px;width:180rpx">{{endDate}}</view>
+        </picker>
+    </view>
+    <text style="position :absolute;left:35%;top: 42%;z-index: 4;">开始时间</text>
+    <view style="height: 10%;width: 0.5%;border-left: rgb(175, 175, 175) 2px solid;border-radius: 15%;position: absolute;top: 51%;left: 24%;z-index: 4;"></view>
+    <image src="../images/endTime.png" style="width:49.67px;height:51.52px;position :absolute;left:18%;top: 62%;z-index: 4;overflow-y: hidden;"></image>
+    <text style="position :absolute;left:35%;top: 62%;z-index: 4;">结束时间</text>
+    <button bindtap="queryE" class="cu-btn block bg-blue margin-tb-sm lg" style="position :absolute;top: 82%;left: 27%; z-index: 4;overflow-y: hidden;">查询</button>
+</view>
